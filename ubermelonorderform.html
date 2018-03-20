@@ -3,79 +3,105 @@
 
     <head>
         <title>Ubermelon Order Form</title>
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+
+            div{
+                margin: 10% 0 0 10%;
+                display: inline-block;
+            }
+
+            table {
+
+                border-collapse: collapse;
+                border:1px solid black;
+            }
+
+            table th,
+            table td {
+                padding: 5px 15px;
+                border: 1px solid black;
+            }
+
+        </style>
     </head>
 
     <body>
-        <h1>Order!</h1>
         
-        <h3>Prices</h3>
+        <div class="pricestable">
+            <h3>Prices</h3>
 
-        <table>
-            <tr>
-                <th>Melon Name</th>
-                <th>Price per lb</th>
-            </tr>
-            <tr>
-                <td>Watermelon</td>
-                <td>$1.59</td>
-            </tr>
-            <tr>
-                <td>Honeydew</td>
-                <td>$0.99</td>
-            </tr>
-            <tr>
-                <td>Canteloupe</td>
-                <td>$1.29</td>
-            </tr>
-            <tr>
-                <td>Crenshaw</td>
-                <td>$2.19</td>
-            </tr>
-            <tr>
-                <td>Canary</td>
-                <td>$11.99</td>
-            </tr>
-        </table>
+            <table>
+                <tr>
+                    <th>Melon Name</th>
+                    <th>Price per lb</th>
+                </tr>
+                <tr>
+                    <td>Watermelon</td>
+                    <td>$1.59</td>
+                </tr>
+                <tr>
+                    <td>Honeydew</td>
+                    <td>$0.99</td>
+                </tr>
+                <tr>
+                    <td>Canteloupe</td>
+                    <td>$1.29</td>
+                </tr>
+                <tr>
+                    <td>Crenshaw</td>
+                    <td>$2.19</td>
+                </tr>
+                <tr>
+                    <td>Canary</td>
+                    <td>$11.99</td>
+                </tr>
+            </table>
+        </div>
+        <div class="">
+            <h1>Order!</h1>
 
-        <p> 
-            Place your orders here! You know you want to. 
-        </p>
+            <h3> 
+                Place your orders here! You know you want to. 
+            </h3>
 
-        <form action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
-        <span>First name</span>
-            <input type="text" name="firstname" required></input>
-        <br><span>Last name</span>
-            <input type="text" name="lastname"></input>
-        <br><span>Melon Type</span>
-            <select name="melontype">
-                <option value="watermelon">Watermelon</option>
-                <option value="honeydew">Honeydew</option>
-                <option value="canteloupe">Canteloupe</option>
-                <option value="crenshaw">Crenshaw</option>
-                <option value="canary">Canary</option>
-            </select>
-        <br><span>Quantity*:</span>
-            <input type="text" name="quantity"></input>
-        <br><span>Delivery Time</span>
-            <input type="radio" name="time" value="AM">12:00am-12:00pm</input>
-            <input type="radio" name="time" value="PM">12:00pm-12:00am</input>
-            <input type="radio" name="time" value="wat">Time is an illusion</input>
-        <br><span>Returning Customer?</span>
-            <input type="radio" name="returning" value="yes">Yes</input>
-            <input type="radio" name="returning" value="no">No</input>
-        <br><span>For Statistical Purposes:</span>
-            <input type="checkbox" name="stats" value="dog">Dog</input>
-            <input type="checkbox" name="stats" value="cat">Cat</input>
-            <input type="checkbox" name="stats" value="hedgehog">Hedgehog</input>
-            <input type="checkbox" name="stats" value="balloonicorn">Balloonicorn</input>
-            <input type="checkbox" name="stats" value="yak">Yak</input>
+            <form action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
+            <span>First name</span>
+                <input type="text" name="firstname" required></input>
+            <br><span>Last name</span>
+                <input type="text" name="lastname"></input>
+            <br><span>Melon Type</span>
+                <select name="melontype">
+                    <option value="watermelon">Watermelon</option>
+                    <option value="honeydew">Honeydew</option>
+                    <option value="canteloupe">Canteloupe</option>
+                    <option value="crenshaw">Crenshaw</option>
+                    <option value="canary">Canary</option>
+                </select>
+            <br><span>Quantity*:</span>
+                <input type="text" name="quantity"></input>
+            <br><span>Delivery Time</span>
+                <input type="radio" name="time" value="AM">12:00am-12:00pm</input>
+                <input type="radio" name="time" value="PM">12:00pm-12:00am</input>
+                <input type="radio" name="time" value="wat">Time is an illusion</input>
+            <br><span>Returning Customer?</span>
+                <input type="radio" name="returning" value="yes">Yes</input>
+                <input type="radio" name="returning" value="no">No</input>
+            <br><span>For Statistical Purposes:</span>
+                <input type="checkbox" name="stats" value="dog">Dog</input>
+                <input type="checkbox" name="stats" value="cat">Cat</input>
+                <input type="checkbox" name="stats" value="hedgehog">Hedgehog</input>
+                <input type="checkbox" name="stats" value="balloonicorn">Balloonicorn</input>
+                <input type="checkbox" name="stats" value="yak">Yak</input>
 
-        <p>Comments:</p>
-        <textarea name="comments" rows="10" cols="50">Write something</textarea>
-        <br><input type="submit"></input>
-        </form>
+            <p>Comments:</p>
+            <textarea name="comments" rows="10" cols="50">Write something</textarea>
+            <br><input type="submit"></input>
+            </form>
 
-        <footer>*Quantities given are by the flat.</footer>
-    </body>
-
+            <footer>*Quantities given are by the flat.</footer>
+        </body>
+    </div>
 </html>
